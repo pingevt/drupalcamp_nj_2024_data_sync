@@ -78,7 +78,7 @@ Maintaining 2 independent sources
 It is NOT migration (explain the difference)
 Migration is changing the source of truth
 Moving old source to new source
-Picky distinction, but I think important detail to keep in mind
+Picky distinction, but I think important **detail** to keep in mind
 
 ^
 todo: build out
@@ -100,6 +100,112 @@ Why are we talking about this? (2 mins) [diagrams]
 What was the purpose for the Carter?
   AC purpose was
 However many more reasons for Syncing Data.
+
+---
+
+[.header: #FF0000, alignment(center), line-height(20), text-scale(2.0)]
+<br>
+# New Structure
+
+---
+
+[.text: alignment(center)]
+[.footer-style: alignment(left)]
+[.slidenumber-style: alignment(right)]
+
+# <br>
+# <br>
+# <br>
+# First, _define_ the **state**
+# and the **constraints**
+
+---
+
+[.text: alignment(center)]
+[.footer-style: alignment(left)]
+[.slidenumber-style: alignment(right)]
+
+# <br>
+# <br>
+# <br>
+# Second, _decide_ on an
+# execution **strategy**
+
+---
+
+[.text: alignment(center)]
+[.footer-style: alignment(left)]
+[.slidenumber-style: alignment(right)]
+
+# <br>
+# <br>
+# <br>
+# Third, _decide_ on
+# the right **tools**
+
+---
+
+# Say it again
+
+1. First, _define_ the **state** and the **constraints**
+1. Second, _decide_ on an execution **strategy**
+1. Third, _decide_ on the right **tools**
+
+^ Lets look at how we did walked through these steps for Amon Carter.
+
+---
+
+# First, _define_ the **state** and the **constraints**
+## Why were we doing this for the Carter?
+
+> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
+
+<!-- Create a best-in-class Collections Explorer for both researchers and the general public that integrates Amon Carter’s Art and Archive collections -->
+
+---
+
+# First, _define_ the **state** and the **constraints**
+
+<!-- ## -->
+
+- AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
+- Custom Data Structures (but in JSON)
+- Didn’t need immediate updates
+- Low volume of updates
+- Wanted all the imagery **in** the CMS
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+[.header: #FF0000, alignment(center), line-height(20), text-scale(2.0)]
+<br>
+# OLD Structure
 
 ---
 
