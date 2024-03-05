@@ -43,6 +43,12 @@ ___
 
 # What is Amon Carter
 
+**Located in the heart of Fort Worth’s Cultural District, the Amon Carter Museum of American Art (the Carter) is a dynamic cultural resource that provides unique access and insight into the history and future of American creativity through its expansive exhibitions and programming. Admission is always free. To learn more about the Carter, visit cartermuseum.org.**
+
+![](media/20200730_0606.jpg)
+
+![inline right](media/ACMoAA_Logo_RGB.png)
+
 ---
 
 # Quick Poll
