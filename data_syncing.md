@@ -2,7 +2,7 @@ autoscale: false
 build-lists: true
 slidenumbers: true
 slide-transition: push(horizontal, 0.25)
-footer: Pete Inge | Bluecadet | Synchronizing Art with Technology
+footer: **Pete Inge** | Bluecadet | __Synchronizing Art with Technology__
 
 # Synchronizing Art with Technology
 ## Data Integration at the Amon Carter Museum of American Art
@@ -158,15 +158,17 @@ However many more reasons for Syncing Data.
 # First, _define_ the **state** and the **constraints**
 ## Why were we doing this for the Carter?
 
-> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
+> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.`
 
 <!-- Create a best-in-class Collections Explorer for both researchers and the general public that integrates Amon Carter’s Art and Archive collections -->
+
+^ less technical client so we had braod strokes vs hard rukes
 
 ---
 
 # First, _define_ the **state** and the **constraints**
 
-<!-- ## -->
+## Starting Development
 
 - AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
 - Custom Data Structures (but in JSON)
@@ -174,6 +176,55 @@ However many more reasons for Syncing Data.
 - Low volume of updates
 - Wanted all the imagery **in** the CMS
 
+^ We are lucky with most museums that we don't need instantanious/real-time updates.
+We were told low volume of updates
+I forget why, but all imagery inthe CMS
+
+^ We created more constraints as we worked through the process.
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies
+
+1. Use live external endpoints
+
+^ I would say not recommended, but there are some use cases.
+THF is a good example of the use case. [todo pics!]
+Connection to Github (to display open tickets) [todo pics!]
+NOT an option for AC
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies
+
+1. Use live external endpoints
+1. Save raw data, process on the fly
+
+^
+Where do you want the lift to be?
+Will the end user be affected by this?
+Ex: Wikidata bio fields
+“Fallback content” - could pro ecss on the fly
+  Process thousands of pieces of data with an unknown amount actually needed.
+  Assuming “Important” content will not need fallbacks
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies[^**]
+
+1. Use live external endpoints
+1. Save raw data, process on the fly
+1. Bring all data into Drupal Entities, _nodes and taxonomies etc._
+
+[^**]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
+
+^ Most robust
+How much do we need to “Drupalize” all the data? I may need taxonomies for other parts of the site to build views or determine “related” content.
+
+
 ---
 
 
@@ -192,16 +243,7 @@ However many more reasons for Syncing Data.
 ---
 
 
----
-
-
----
-
-
----
-
-
----
+---`
 
 [.header: #FF0000, alignment(center), line-height(20), text-scale(2.0)]
 <br>
