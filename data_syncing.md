@@ -1,5 +1,5 @@
 autoscale: false
-build-lists: true
+build-lists: false
 slidenumbers: true
 slide-transition: push(horizontal, 0.25)
 footer: **Pete Inge** | Bluecadet | __Synchronizing Art with Technology__
@@ -16,7 +16,7 @@ footer: **Pete Inge** | Bluecadet | __Synchronizing Art with Technology__
 # Who am I?
 
 ## Pete Inge
-### Tech Lead, Bluecadet
+### Senior Systems Architect, Bluecadet
 
 **pinge@bluecadet.com**
 **github.com/pingevt**
@@ -51,6 +51,7 @@ ___
 
 ---
 
+[.build-lists: true]
 # Quick Poll
 
 * Interest in Art and Technology Integration
@@ -66,46 +67,77 @@ Audience? Why did they attend the talk?
 
 # What is **Data Syncing**?
 
-## Bringing external data into your site for a specific purpose.
+![right](media/vert.jpg)
 
-### It is **NOT** migration
+^
+What is Data syncing? (2 mins)
+
+---
+
+# What is **Data Syncing**?
+
+## Bringing external data into your site for a specific purpose
+
+![right](media/vert.jpg)
 
 ^
 What is Data syncing? (2 mins) [AI imagery]
 Bringing external data into your site for a specific purpose
 Maintains current Source of truth
 Maintaining 2 independent sources
-It is NOT migration (explain the difference)
-Migration is changing the source of truth
-Moving old source to new source
-Picky distinction, but I think important **detail** to keep in mind
-
-^
-todo: build out
 
 ---
 
+# What is **Data Syncing**?
+
+## Bringing external data into your site for a specific purpose
+
+### It is **NOT** migration
+
+![right](media/vert.jpg)
+
+^
+What is Data syncing? (2 mins) [AI imagery]
+Bringing external data into your site for a specific purpose
+Maintains current Source of truth
+Maintaining 2 independent sources
+
+^
+- It is NOT migration (explain the difference)
+Migration is changing the source of truth
+Moving old source to new source
+
+^
+- Picky distinction, but I think important **detail** to keep in mind
+
+---
+
+[.build-lists: true]
+
 # Why are we talking about this today?
 
-- we're developers.. duh
-- Accross the board, we've seen a surge in organisations wanting to digitize
-- In the museum space, a typical museum has about 95% of their collection in storage
+* We're developers.. duh
+* Current state of technology
+* Accross the board, we've seen a surge in organisations wanting to digitize
+* In the museum space, a typical museum has about 95% of their collection in storage
 
 ^
 Why are we talking about this? (2 mins) [diagrams]
+  Microservices and data everywhere
   Modernizing collections (data)
   Typical museum has about 95% of their collection in storage
   W/ the pandemic, surge in orgs wanting to digitize
   Drupal is a great platform for larger enterprise level syncs
-What was the purpose for the Carter?
-  AC purpose was
-However many more reasons for Syncing Data.
+  Getting the public to see your content, not just researchers
+~~What was the purpose for the Carter?
+  AC purpose was~~
+
+^
+-->However many more reasons for Syncing Data.
 
 ---
 
-[.header: #FF0000, alignment(center), line-height(20), text-scale(2.0)]
-<br>
-# New Structure
+^Lets dive in!
 
 ---
 
@@ -158,7 +190,7 @@ However many more reasons for Syncing Data.
 # First, _define_ the **state** and the **constraints**
 ## Why were we doing this for the Carter?
 
-> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.`
+> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
 
 <!-- Create a best-in-class Collections Explorer for both researchers and the general public that integrates Amon Carter’s Art and Archive collections -->
 
@@ -173,13 +205,13 @@ However many more reasons for Syncing Data.
 
 * AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
 * Custom Data Structures (but in JSON)
-* Didn’t need immediate updates
+* Did not need immediate updates
 * Low volume of updates
 * Wanted all the imagery **in** the CMS
 
 ^ We are lucky with most museums that we don't need instantanious/real-time updates.
 We were told low volume of updates
-I forget why, but all imagery inthe CMS
+I forget why, but all imagery in the CMS
 
 ^ We created more constraints as we worked through the process.
 
@@ -203,26 +235,41 @@ NOT an option for AC
 ## Syncing Strategies
 
 1. Use live external endpoints
-1. Save raw data, process on the fly
 
-^
-Where do you want the lift to be?
-Will the end user be affected by this?
-Ex: Wikidata bio fields
-“Fallback content” - could pro ecss on the fly
-  Process thousands of pieces of data with an unknown amount actually needed.
-  Assuming “Important” content will not need fallbacks
+![right fit](media/thf_sync.mp4)
+# todo get vid of Ryan's work
+
+^ I would say not recommended, but there are some use cases.
+THF is a good example of the use case. [todo pics!]
+Connection to Github (to display open tickets) [todo pics!]
+NOT an option for AC
 
 ---
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies[^**]
+## Syncing Strategies
+
+1. Use live external endpoints
+1. Save raw data, process on the fly
+
+^
+Where do you want the lift to be?
+**Will the end user be affected by this?**
+Ex: Wikidata bio fields
+“Fallback content” - could process on the fly
+ * Process thousands of pieces of data with an unknown amount actually needed.
+ * Assuming “Important” content will not need fallbacks
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies[^*]
 
 1. Use live external endpoints
 1. Save raw data, process on the fly
 1. Bring all data into Drupal Entities, _nodes and taxonomies etc._
 
-[^**]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
+[^*]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
 
 ^ Most robust
 How much do we need to “Drupalize” all the data? I may need taxonomies for other parts of the site to build views or determine “related” content.
@@ -237,7 +284,7 @@ How much do we need to “Drupalize” all the data? I may need taxonomies for o
 1. Save raw data, process on the fly
 1. **Bring all data into Drupal Entities, _nodes and taxonomies etc._**
 
-# todo - video building a field...
+ <!-- todo - video building a field... -->
 
 ^ Unfortunately I don't rememebr the exact why's on these decisions.
 
@@ -252,12 +299,41 @@ How much do we need to “Drupalize” all the data? I may need taxonomies for o
 
 ### We wanted to “Drupalize” all the data
   1. Needed related data, data was not in a silo
-  1. Content was going to be enhanced (added fields and content and display options) in the CMS
-  1. Search API indexing [^*]
 
-[^*]: honestly not needed, but I didn’t fully understand that at the time
+^
+We're relating artworks and artists in content throughout the site.
 
 ---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies - Solution
+
+### We wanted to “Drupalize” all the data
+  1. Needed related data, data was not in a silo
+  1. Content was going to be enhanced (added fields and content and display options) in the CMS
+
+^
+Needed a ref for content authors.
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies - Solution
+
+### We wanted to “Drupalize” all the data
+  1. Needed related data, data was not in a silo
+  1. Content was going to be enhanced (added fields and content and display options) in the CMS
+  1. Search API indexing [^**]
+
+[^**]: honestly not needed, but I didn’t fully understand that at the time
+
+^
+At this point, I had used search_api in the past, but ...I was a "configurer" but didn't understand the nuts and bolts.
+
+---
+
+^
+-->
 
 ---
 
@@ -321,6 +397,12 @@ Let Drupal, **Drupal**
 
 ---
 
+^
+I like to reinvent the wheel, b/c i obvisouly can do it better...
+
+^
+--> So lets look at some more technical reasons.
+
 ---
 
 # Third, _decide_ on the right **tools**
@@ -328,9 +410,22 @@ Let Drupal, **Drupal**
 
 ### Timing and queueing the updates required a custom code solution
 
+<br>
+
+---
+
+[.build-lists: true]
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+### Timing and queueing the updates required a custom code solution
+
 1. Grab Data
-1. Add item to a Queue Worker(s)
-1. Process Item in the queue at a later time
+2. Add item to a Queue Worker(s)
+3. Process Item in the queue at a later time
+
+![inline](media/horizontal-flow.jpg)
 
 ---
 
@@ -339,9 +434,9 @@ Let Drupal, **Drupal**
 
 ### Custom Code
 
-Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^*]
+Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^***]
 
-[^*]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
+[^***]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
 
 ---
 
@@ -352,14 +447,12 @@ Actual ingestion of data could have been Feeds or Migration, but would have requ
 * Dealing with Image files
   * Text is fast, images (files) are not
   * How to detect new images
-
-* Reliability of your external data sources
 * Custom Code
   * Error catching and handeling
   * Proper reporting for what fails
+* Reliability of your external data sources
 * Dates
 * Pre-caching
-
 
 ^
 What worked and what did not.  (5 mins)
@@ -395,6 +488,7 @@ Re Search API, writing custom index plugins is really easy (Once you figure it o
 ### Questions?
 ### Comments?
 ### Discussion?
+### Feedback?
 
 ^
 QA (rest)
@@ -521,13 +615,13 @@ Second, Decide on an Execution Strategy (10 mins) [???]
 ---
 
 # Second, Decide on an Execution **Strategy**
-## Syncing Strategies[^*]
+## Syncing Strategies[^1]
 
 1. Use live external endpoints
 1. Save raw data, process on the fly
 1. Bring all data into Drupal Entities, _nodes and taxonomies etc._
 
-[^*]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
+[^1]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
 
 
 ^
@@ -583,9 +677,9 @@ Not sure what conditions I would suggest this. (especially writing directly to t
 ## We wanted to “Drupalize” all the data
   1. Needed related data, data was not in a silo
   1. Content was going to be enhanced (added fields and content and display options) in the CMS
-  1. Search API indexing [^*]
+  1. Search API indexing [^2]
 
-[^*]: honestly not needed, but I didn’t fully understand that at the time
+[^2]: honestly not needed, but I didn’t fully understand that at the time
 
 ---
 
@@ -604,9 +698,9 @@ Not sure what conditions I would suggest this. (especially writing directly to t
 
 ## Custom Code
 
-Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^*]
+Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^3]
 
-[^*]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
+[^3]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
 
 ---
 
