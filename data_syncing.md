@@ -166,21 +166,24 @@ However many more reasons for Syncing Data.
 
 ---
 
-# First, _define_ the **state** and the **constraints**
+[.build-lists: true]
 
+# First, _define_ the **state** and the **constraints**
 ## Starting Development
 
-- AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
-- Custom Data Structures (but in JSON)
-- Didn’t need immediate updates
-- Low volume of updates
-- Wanted all the imagery **in** the CMS
+* AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
+* Custom Data Structures (but in JSON)
+* Didn’t need immediate updates
+* Low volume of updates
+* Wanted all the imagery **in** the CMS
 
 ^ We are lucky with most museums that we don't need instantanious/real-time updates.
 We were told low volume of updates
 I forget why, but all imagery inthe CMS
 
 ^ We created more constraints as we worked through the process.
+
+---
 
 ---
 
@@ -224,6 +227,177 @@ Ex: Wikidata bio fields
 ^ Most robust
 How much do we need to “Drupalize” all the data? I may need taxonomies for other parts of the site to build views or determine “related” content.
 
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies - Solution
+
+[.text-strong: #ff0000]
+1. Use live external endpoints
+1. Save raw data, process on the fly
+1. **Bring all data into Drupal Entities, _nodes and taxonomies etc._**
+
+# todo - video building a field...
+
+^ Unfortunately I don't rememebr the exact why's on these decisions.
+
+^ We had a lot of timing issues to work with checking for updates. So queueing up needed to be custom and partially just continued.
+
+^ I had used search_api in the past, but ...I was a configurer but didn't understand the nuts and bolts.
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies - Solution
+
+### We wanted to “Drupalize” all the data
+  1. Needed related data, data was not in a silo
+  1. Content was going to be enhanced (added fields and content and display options) in the CMS
+  1. Search API indexing [^*]
+
+[^*]: honestly not needed, but I didn’t fully understand that at the time
+
+---
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+* Migrate Module
+
+^ Migrate module
+History of migrate: D->D
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+* Migrate Module
+* Feeds Module
+
+^ Feeds __module__
+History of feeds: Ingesting RSS, XML feeds
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+* Migrate Module
+* Feeds Module
+* Custom Code
+
+^
+Custom Code
+* Extra effort
+* Technical debt
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+* Migrate Module
+* Feeds Module
+* Custom Code
+* External to CMS
+
+^ Not sure what conditions I would suggest this.
+You really have to know what you're doing
+Let Drupal, **Drupal**
+(especially writing directly to the DB, or at least to drupal’s tables)
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+* Migrate Module
+* Feeds Module
+* **Custom Code**
+* External to CMS
+
+---
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+### Timing and queueing the updates required a custom code solution
+
+1. Grab Data
+1. Add item to a Queue Worker(s)
+1. Process Item in the queue at a later time
+
+---
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+### Custom Code
+
+Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^*]
+
+[^*]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
+
+---
+
+---
+
+# Things we learned
+
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+
+* Reliability of your external data sources
+* Custom Code
+  * Error catching and handeling
+  * Proper reporting for what fails
+* Dates
+* Pre-caching
+
+
+^
+What worked and what did not.  (5 mins)
+Dealing with images - should spend a lot more time thinking about this.
+Slow external API.
+B/c of custom code, we needed to add in more error checking and handling after the fact. We weren’t handling failure well or able to debug why failures were happening.
+Date strings to date objects.
+During maintenance, second queue to pre-cache teaser views of artwork content
+
+---
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data” nodes
+* Bringing in majority of data to custom database tables
+* Re: Search API, writing custom index plugins is really easy (Once you figure it out)
+
+^
+Future Strategies  (5 mins)
+“Synced data Entities” connected to “Enhanced Data” nodes.
+Current project, bringing in majority of data to custom DB tables
+Speeds up syncing (less entities for complicated data)
+Speeds up development time
+If I need to “Drupalize” specific data, I can in the future.
+Code is a bit more in-line with “Drupal code”
+I could be wrong about this, but I'd like to think it's true.
+Re Search API, writing custom index plugins is really easy (Once you figure it out)
+
+---
+
+# Thank you!
+
+### Questions?
+### Comments?
+### Discussion?
+
+^
+QA (rest)
 
 ---
 
@@ -243,7 +417,28 @@ How much do we need to “Drupalize” all the data? I may need taxonomies for o
 ---
 
 
----`
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
+
+
+---
 
 [.header: #FF0000, alignment(center), line-height(20), text-scale(2.0)]
 <br>
@@ -285,11 +480,11 @@ Wanted all the imagery IN the CMS.
 
 # First, _define_ the **state** and the **constraints**
 
-- AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
-- Custom Data Structures (but in JSON)
-- Didn’t need immediate updates
-- Low volume of updates
-- Wanted all the imagery **in** the CMS
+* AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
+* Custom Data Structures (but in JSON)
+* Didn’t need immediate updates
+* Low volume of updates
+* Wanted all the imagery **in** the CMS
 
 ^
 First, define the state and constraints. (8 mins) [???]
@@ -361,10 +556,10 @@ A few more we’ll talk about later, but these were the options I had in my mind
 # Second, Decide on an Execution **Strategy**
 ## Syncing Tools
 
-- Migrate Module
-- Feeds Module
-- Custom Code
-- External to CMS
+* Migrate Module
+* Feeds Module
+* Custom Code
+* External to CMS
 
 ![right fit 12%](media/IMG_1888.JPG)
 
@@ -433,13 +628,14 @@ I always go back and forth, b/c I want to do it the “Drupal way” but reality
 
 # Things we learned
 
-- Dealing with Image files
-  - Text is fast, images (files) are not
-  - How to detect new images
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+
 * Reliability of your external data sources
 * Custom Code
-  - Error catching and handeling
-  - Proper reporting for what fails
+  * Error catching and handeling
+  * Proper reporting for what fails
 * Dates
 * Pre-caching
 
@@ -457,9 +653,9 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 # Future Thougths and Strategies
 
-- “Synced data Entities” connected to “Enhanced Data” nodes
-- Bringing in majority of data to custom database tables
-- Re: Search API, writing custom index plugins is really easy (Once you figure it out)
+* “Synced data Entities” connected to “Enhanced Data” nodes
+* Bringing in majority of data to custom database tables
+* Re: Search API, writing custom index plugins is really easy (Once you figure it out)
 
 ^
 Future Strategies  (5 mins)
