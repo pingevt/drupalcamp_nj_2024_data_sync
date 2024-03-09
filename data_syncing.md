@@ -2,7 +2,9 @@ autoscale: false
 build-lists: false
 slidenumbers: true
 slide-transition: push(horizontal, 0.25)
-footer: **Pete Inge** | Bluecadet | __Synchronizing Art with Technology__
+text-strong: #9EA6D7
+list: bullet-character(-)
+footer: **Pete Inge** | Bluecadet | _Synchronizing Art with Technology_
 
 # Synchronizing Art with Technology
 ## Data Integration at the Amon Carter Museum of American Art
@@ -49,6 +51,10 @@ ___
 
 ![inline right](media/ACMoAA_Logo_RGB.png)
 
+^ I'll let you read that, but the Carter is a great medium size museum in Texas.
+
+^ We at Bluecadet, partnered with them a few years ago to work on their website.
+
 ---
 
 [.build-lists: true]
@@ -58,7 +64,7 @@ ___
 * Developer/PM (with current challenges in mind)
 * Developer/PM (with a future project in mind)
 * Developer/PM (Other)
-* Art Museum Directors looking to hire me/Bluecadet
+* Other
 
 ^ 2 mins
 Audience? Why did they attend the talk?
@@ -72,6 +78,8 @@ Audience? Why did they attend the talk?
 ^
 What is Data syncing? (2 mins)
 
+^ Sorry about the AI imagery, but talks on data are hard to get great images.
+
 ---
 
 # What is **Data Syncing**?
@@ -81,10 +89,19 @@ What is Data syncing? (2 mins)
 ![right](media/vert.jpg)
 
 ^
-What is Data syncing? (2 mins) [AI imagery]
+What is Data syncing? (2 mins)
+
+^
 Bringing external data into your site for a specific purpose
+
+^
 Maintains current Source of truth
+
+^
 Maintaining 2 independent sources
+
+^
+Mostly maintinas data structure
 
 ---
 
@@ -97,15 +114,12 @@ Maintaining 2 independent sources
 ![right](media/vert.jpg)
 
 ^
-What is Data syncing? (2 mins) [AI imagery]
-Bringing external data into your site for a specific purpose
-Maintains current Source of truth
-Maintaining 2 independent sources
+What is Data syncing? (2 mins)
 
 ^
-- It is NOT migration (explain the difference)
+It is NOT migration (explain the difference)
 Migration is changing the source of truth
-Moving old source to new source
+Moving old source to new source, often modifying the data structure
 
 ^
 - Picky distinction, but I think important **detail** to keep in mind
@@ -121,23 +135,29 @@ Moving old source to new source
 * Accross the board, we've seen a surge in organisations wanting to digitize
 * In the museum space, a typical museum has about 95% of their collection in storage
 
-^
-Why are we talking about this? (2 mins) [diagrams]
-  Microservices and data everywhere
-  Modernizing collections (data)
-  Typical museum has about 95% of their collection in storage
-  W/ the pandemic, surge in orgs wanting to digitize
-  Drupal is a great platform for larger enterprise level syncs
-  Getting the public to see your content, not just researchers
-~~What was the purpose for the Carter?
-  AC purpose was~~
+todo: image/diagram
 
 ^
--->However many more reasons for Syncing Data.
+Why are we talking about this? (2 mins) [diagrams]
+- Microservices and data everywhere
+- Modernizing collections (data)
+- Typical museum has about 95% of their collection in storage
+- W/ the pandemic, surge in orgs wanting to digitize
+- Drupal is a great platform for larger enterprise level syncs
+- Getting the public to see your content, not just researchers
+
+^
+--> However many more reasons for Syncing Data.
 
 ---
 
-^Lets dive in!
+[image]
+
+^
+Lets dive in!
+
+^
+at a high level, I break syncing into 3 parts.
 
 ---
 
@@ -151,6 +171,15 @@ Why are we talking about this? (2 mins) [diagrams]
 # First, _define_ the **state**
 # and the **constraints**
 
+^
+As developers, hopefully this is a bit obvious. We need to define the problem.
+
+^
+I would say here, you should probably document this. As you'll hear me say in future slides, I don't remember the WHY
+
+^
+Years later are my issues based on a whim or a real reason?
+
 ---
 
 [.text: alignment(center)]
@@ -162,6 +191,12 @@ Why are we talking about this? (2 mins) [diagrams]
 # <br>
 # Second, _decide_ on an
 # execution **strategy**
+
+^
+How does this work, what is the methodology.
+
+^
+Think through the consequences
 
 ---
 
@@ -175,6 +210,11 @@ Why are we talking about this? (2 mins) [diagrams]
 # Third, _decide_ on
 # the right **tools**
 
+^
+Make sure you are using the right tools.
+
+^ tech debt, save yourself as much as you can in the future.
+
 ---
 
 # Say it again
@@ -183,7 +223,8 @@ Why are we talking about this? (2 mins) [diagrams]
 1. Second, _decide_ on an execution **strategy**
 1. Third, _decide_ on the right **tools**
 
-^ Lets look at how we did walked through these steps for Amon Carter.
+^
+--> Lets look at how we did walked through these steps for Amon Carter. -->
 
 ---
 
@@ -194,7 +235,7 @@ Why are we talking about this? (2 mins) [diagrams]
 
 <!-- Create a best-in-class Collections Explorer for both researchers and the general public that integrates Amon Carter’s Art and Archive collections -->
 
-^ less technical client so we had braod strokes vs hard rukes
+^ less technical client so we had broad strokes vs hard rules
 
 ---
 
@@ -209,15 +250,21 @@ Why are we talking about this? (2 mins) [diagrams]
 * Low volume of updates
 * Wanted all the imagery **in** the CMS
 
-^ We are lucky with most museums that we don't need instantanious/real-time updates.
+^
+We are lucky with most museums that we don't need instantanious/real-time updates.
 We were told low volume of updates
-I forget why, but all imagery in the CMS
 
-^ We created more constraints as we worked through the process.
+^
+I forget why, but all imagery in the CMS. (was it a whim?)
+
+^
+We created more constraints as we worked through the process.
 
 ---
 
 ---
+
+[.column]
 
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies
@@ -229,6 +276,9 @@ THF is a good example of the use case. [todo pics!]
 Connection to Github (to display open tickets) [todo pics!]
 NOT an option for AC
 
+
+[.column]
+
 ---
 
 # Second, _decide_ on an execution **strategy**
@@ -236,8 +286,7 @@ NOT an option for AC
 
 1. Use live external endpoints
 
-![right fit](media/thf_sync.mp4)
-# todo get vid of Ryan's work
+![right fit mute autoplay loop](media/HowMomentWidget.mp4)
 
 ^ I would say not recommended, but there are some use cases.
 THF is a good example of the use case. [todo pics!]
@@ -271,37 +320,31 @@ Ex: Wikidata bio fields
 
 [^*]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
 
-^ Most robust
-How much do we need to “Drupalize” all the data? I may need taxonomies for other parts of the site to build views or determine “related” content.
+^
+**Most robust**
+How much do we need to “Drupalize” all the data?
+Do I need to use the data in the CMS?
+I may need taxonomies for other parts of the site to build views or determine “related” content.
+
+^ Current client want to associate foriegn ids in the editorial work, rather then let Drupal be Drupal.
+
+^
+--> What did we choose for the Carter? -->
 
 ---
 
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies - Solution
 
-[.text-strong: #ff0000]
+[.text-strong: #9EA6D7]
+
 1. Use live external endpoints
 1. Save raw data, process on the fly
 1. **Bring all data into Drupal Entities, _nodes and taxonomies etc._**
 
- <!-- todo - video building a field... -->
-
-^ Unfortunately I don't rememebr the exact why's on these decisions.
-
-^ We had a lot of timing issues to work with checking for updates. So queueing up needed to be custom and partially just continued.
-
-^ I had used search_api in the past, but ...I was a configurer but didn't understand the nuts and bolts.
-
----
-
-# Second, _decide_ on an execution **strategy**
-## Syncing Strategies - Solution
-
-### We wanted to “Drupalize” all the data
-  1. Needed related data, data was not in a silo
+![right fit mute autoplay loop](media/real_madrid.mp4)
 
 ^
-We're relating artworks and artists in content throughout the site.
 
 ---
 
@@ -309,8 +352,19 @@ We're relating artworks and artists in content throughout the site.
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
-  1. Needed related data, data was not in a silo
-  1. Content was going to be enhanced (added fields and content and display options) in the CMS
+  * Needed related data, data was not in a silo
+
+^
+We're relating artworks and artists in content throughout the site for the authoring experience.
+
+---
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies - Solution
+
+### We wanted to “Drupalize” all the data
+  * Needed related data, data was not in a silo
+  * Content was going to be enhanced (added fields and content and display options) in the CMS
 
 ^
 Needed a ref for content authors.
@@ -321,14 +375,17 @@ Needed a ref for content authors.
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
-  1. Needed related data, data was not in a silo
-  1. Content was going to be enhanced (added fields and content and display options) in the CMS
-  1. Search API indexing [^**]
+  * Needed related data, data was not in a silo
+  * Content was going to be enhanced (added fields and content and display options) in the CMS
+  * Search API indexing [^**]
 
 [^**]: honestly not needed, but I didn’t fully understand that at the time
 
 ^
 At this point, I had used search_api in the past, but ...I was a "configurer" but didn't understand the nuts and bolts.
+
+^
+Goes back to documentation. Unfortunately I don't rememebr the exact why's on these decisions.
 
 ---
 
@@ -342,8 +399,13 @@ At this point, I had used search_api in the past, but ...I was a "configurer" bu
 
 * Migrate Module
 
+[AI image of tools]
+
 ^ Migrate module
+Migrate can be used for syncing
 History of migrate: D->D
+
+^ explain drupal is everything for everybody.
 
 ---
 
@@ -380,10 +442,14 @@ Custom Code
 * Custom Code
 * External to CMS
 
-^ Not sure what conditions I would suggest this.
+^
+Not sure what conditions I would suggest this.
 You really have to know what you're doing
 Let Drupal, **Drupal**
 (especially writing directly to the DB, or at least to drupal’s tables)
+
+^
+write to filesystem, process later. if we have 100K objects do we need them all in Drupal?
 
 ---
 
@@ -395,13 +461,13 @@ Let Drupal, **Drupal**
 * **Custom Code**
 * External to CMS
 
----
+![right](media/B18832F1-03BA-4C8E-AD06-63D7F7926234.PNG)
 
 ^
 I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 ^
---> So lets look at some more technical reasons.
+--> So lets look at some more technical reasons. -->
 
 ---
 
@@ -423,7 +489,7 @@ I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 1. Grab Data
 2. Add item to a Queue Worker(s)
-3. Process Item in the queue at a later time
+3. Process Item in the queue at a later time (cron)
 
 ![inline](media/horizontal-flow.jpg)
 
@@ -438,11 +504,19 @@ Actual ingestion of data could have been Feeds or Migration, but would have requ
 
 [^***]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
 
+^
+Date field
+
 ---
 
 ---
+
+[.build-lists: true]
+[.text: text-scale(0.95)]
 
 # Things we learned
+
+[.column]
 
 * Dealing with Image files
   * Text is fast, images (files) are not
@@ -450,6 +524,8 @@ Actual ingestion of data could have been Feeds or Migration, but would have requ
 * Custom Code
   * Error catching and handeling
   * Proper reporting for what fails
+
+[.column]
 * Reliability of your external data sources
 * Dates
 * Pre-caching
@@ -464,10 +540,13 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 ---
 
+[.build-lists: true]
+
 # Future Thougths and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data” nodes
 * Bringing in majority of data to custom database tables
+* Caching strategies (in regards to large datasets)
 * Re: Search API, writing custom index plugins is really easy (Once you figure it out)
 
 ^
@@ -483,12 +562,28 @@ Re Search API, writing custom index plugins is really easy (Once you figure it o
 
 ---
 
+[.header: alignment(left), text-scale(2.0)]
+[.footer-style: alignment(left), line-height(8), #rr0000, text-scale(1.5)]
+[.footer: ]
+[.text: alignment(right)]
+
+[.column]
+
 # Thank you!
 
-### Questions?
-### Comments?
-### Discussion?
-### Feedback?
+## <br>Questions?
+## Comments?
+## Discussion?
+## Feedback?
+
+[.column]
+
+<br><br><br><br><br><br><br><br>
+![inline 90%](media/githuub_qrcode.png)
+
+pinge@bluecadet.com
+pete.inge@gmail.com
+github.com/pingevt/drupalcamp_nj_2024_data_sync
 
 ^
 QA (rest)
