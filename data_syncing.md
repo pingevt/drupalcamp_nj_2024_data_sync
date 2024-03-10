@@ -53,9 +53,14 @@ ___
 
 ![inline right](media/ACMoAA_Logo_RGB.png)
 
-^ I'll let you read that, but the Carter is a great medium size museum in Texas.
+^
+I'll let you read that, but the Carter is a great medium size museum in Texas.
 
-^ We at Bluecadet, partnered with them a few years ago to work on their website.
+^
+We at Bluecadet, partnered with them a few years ago to work on their website.
+
+^
+--> I want to find out about you... -->
 
 ---
 
@@ -63,13 +68,15 @@ ___
 # Quick Poll
 
 * Interest in Art and Technology Integration
-* Developer/PM (with current challenges in mind)
-* Developer/PM (with a future project in mind)
-* Developer/PM (Other)
+* You have current challenges in mind
+* You have a future project in mind
 * Other
 
 ^ 2 mins
 Audience? Why did they attend the talk?
+
+^
+--> Let's define a few things -->
 
 ---
 
@@ -336,10 +343,10 @@ tech debt, save yourself as much as you can in the future.
 # First, _define_ the **state** and the **constraints**
 ## Starting Development
 
-* AC's IT team had set up a pipeline of their Collection Data and Raw media to their DAMs
-* Custom Data Structures (but in JSON)
-* Did not need immediate updates
+* The Carter's IT team had set up a pipeline for their Collection Data to sync to their DAMs
+* Custom Data Structures, in JSON format
 * Low volume of updates
+* Did not need immediate updates
 * Wanted all the imagery **in** the CMS
 
 ^
@@ -492,7 +499,7 @@ I may need taxonomies for other parts of the site to build views or determine �
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
-  * Needed related data, data was not in a silo
+  * Needed related data, the data was not in a silo
 
 ^
 We're relating artworks and artists in content throughout the site for the authoring experience.
@@ -505,11 +512,14 @@ We're relating artworks and artists in content throughout the site for the autho
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
-  * Needed related data, data was not in a silo
-  * Content was going to be enhanced (added fields and content and display options) in the CMS
+  * Needed related data, the data was not in a silo
+  * Content was going to be _enhanced_ in the CMS
 
 ^
 Needed a ref for content authors.
+
+^
+Educational Materials
 
 ---
 
@@ -519,9 +529,9 @@ Needed a ref for content authors.
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
-  * Needed related data, data was not in a silo
-  * Content was going to be enhanced (added fields and content and display options) in the CMS
-  * Search API indexing [^2]
+  * Needed related data, the data was not in a silo
+  * Content was going to be _enhanced_ in the CMS
+  * Content was going to be indexed through the Search API[^2]
 
 [^2]: honestly not needed, but I didn’t fully understand that at the time
 
@@ -678,6 +688,8 @@ I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 ### Timing and queueing the updates required a custom code solution
 
+![inline](media/horizontal-flow.jpg)
+
 <br>
 
 ---
@@ -740,6 +752,23 @@ Actual ingestion of data could have been Feeds or Migration, but would have requ
 
 ---
 
+# Say it again
+
+1. First, _define_ the **state** and the **constraints**
+   * Create a dynamic collections explorer to highlight the Carter’s collection.
+2. Second, _decide_ on an execution **strategy**
+   * Bring all data into Drupal Entities, _nodes and taxonomies etc._
+3. Third, _decide_ on the right **tools**
+   * Custom Code
+
+^
+let's recap!
+
+^
+--> On to things we learned -->
+
+---
+
 [.build-lists: true]
 [.text: text-scale(0.95)]
 
@@ -756,7 +785,8 @@ Actual ingestion of data could have been Feeds or Migration, but would have requ
 
 [.column]
 
-* Reliability of your external data sources
+* Reliability of the external data source
+  * Availability and speed
 * Dates
 * Pre-caching
 
@@ -1001,7 +1031,7 @@ Re Search API, writing custom index plugins is really easy (Once you figure it o
 pinge@bluecadet.com
 pete.inge@gmail.com
 **peteinge.com**
-<sub>**github.com/pingevt/drupalcamp_nj_2024_data_sync**</sub>
+<sub>**github.com/pingevt/drupalcamp\_nj\_2024\_data_sync**</sub>
 
 ^
 QA (rest)
