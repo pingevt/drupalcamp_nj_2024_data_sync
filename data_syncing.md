@@ -3,6 +3,7 @@ build-lists: false
 slidenumbers: true
 text-strong: #9EA6D7
 list: bullet-character(-)
+presenter-notes: text-scale(0.6)
 footer: **Pete Inge** | Bluecadet | _Synchronizing Art with Technology_
 
 # Synchronizing Art with Technology
@@ -112,7 +113,7 @@ Maintains current Source of truth
 Maintaining 2 independent sources
 
 ^
-Mostly maintinas data structure
+Mostly maintains data structure
 
 ---
 
@@ -283,8 +284,7 @@ at a high level, I break syncing into 3 parts.
 ^
 As developers, hopefully this is a bit obvious. We need to define the problem.
 
-^
-I would say here, you should probably document this. As you'll hear me say in future slides, I don't remember the WHY
+^ <br>I would say here, you should probably document this. As you'll hear me say in future slides, I don't remember the WHY
 
 ^
 Years later are my issues based on a whim or a real reason?
@@ -465,7 +465,7 @@ How much do we need to “Drupalize” all the data?
 Do I need to use the data in the CMS?
 I may need taxonomies for other parts of the site to build views or determine “related” content.
 
-^ Current client want to associate foriegn ids in the editorial work, rather then let Drupal be Drupal.
+^ Current client want to associate foreign ids in the editorial work, rather then let Drupal be Drupal.
 
 ^
 --> What did we choose for the Carter? -->
@@ -517,6 +517,9 @@ We're relating artworks and artists in content throughout the site for the autho
 
 ^
 Needed a ref for content authors.
+
+^
+Collection data is curatorially heavy... need to enhance for the general public.
 
 ^
 Educational Materials
@@ -626,6 +629,7 @@ History of feeds: Ingesting RSS, XML feeds
 Custom Code
 1. Extra effort
 1. Technical debt
+2. tech debt on contributors / opensource comm instead of on your devs
 
 ---
 
@@ -739,16 +743,12 @@ I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^3]
 
+![right fit 12%](media/IMG_1888.JPG)
+
 [^3]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
 
 ^
---> So what did we learn from all this? -->
-
----
-
-[.footer: ]
-[.slidenumbers: false]
-![](media/38dceaf661d248b69d2fb9d801254587.jpg)
+--> Quick recap -->
 
 ---
 
@@ -766,10 +766,133 @@ let's recap!
 
 ^
 --> On to things we learned -->
+--> So what did we learn from all this? -->
 
 ---
 
-[.build-lists: true]
+[.footer: ]
+[.slidenumbers: false]
+![](media/38dceaf661d248b69d2fb9d801254587.jpg)
+
+---
+
+[.text: text-scale(0.95)]
+
+# Things We Learned
+
+[.column]
+
+<br>
+
+[.column]
+
+<br>
+
+^
+What worked and what did not.  (5 mins)
+
+---
+
+[.text: text-scale(0.95)]
+
+# Things We Learned
+
+[.column]
+
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+
+[.column]
+
+<br>
+
+^
+What worked and what did not.  (5 mins)
+
+^
+Dealing with images - should spend a lot more time thinking about this.
+
+---
+
+[.text: text-scale(0.95)]
+
+# Things We Learned
+
+[.column]
+
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+* Custom Code
+  * Error catching and handeling
+  * Proper reporting for what fails
+
+[.column]
+
+<br>
+
+^
+What worked and what did not.  (5 mins)
+
+^
+B/c of custom code, we needed to add in more error checking and handling after the fact. We weren’t handling failure well or able to debug why failures were happening.
+
+---
+
+[.text: text-scale(0.95)]
+
+# Things We Learned
+
+[.column]
+
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+* Custom Code
+  * Error catching and handeling
+  * Proper reporting for what fails
+
+[.column]
+
+* Reliability of the external data source
+  * Availability and speed
+
+^
+What worked and what did not.  (5 mins)
+
+^
+Slow external API.
+
+---
+
+[.text: text-scale(0.95)]
+
+# Things We Learned
+
+[.column]
+
+* Dealing with Image files
+  * Text is fast, images (files) are not
+  * How to detect new images
+* Custom Code
+  * Error catching and handeling
+  * Proper reporting for what fails
+
+[.column]
+
+* Reliability of the external data source
+  * Availability and speed
+* Dates
+
+^
+What worked and what did not.  (5 mins)
+
+^
+Date strings to date objects.
+
+---
+
 [.text: text-scale(0.95)]
 
 # Things We Learned
@@ -792,14 +915,11 @@ let's recap!
 
 ^
 What worked and what did not.  (5 mins)
-Dealing with images - should spend a lot more time thinking about this.
-Slow external API.
-B/c of custom code, we needed to add in more error checking and handling after the fact. We weren’t handling failure well or able to debug why failures were happening.
-Date strings to date objects.
+
+^
 During maintenance, second queue to pre-cache teaser views of artwork content
 
 ---
-
 # Future Thougths and Strategies
 
 ^
@@ -943,7 +1063,7 @@ Future Strategies  (5 mins)
 # Future Thougths and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data” nodes
-* Bringing in majority of data to custom DB tables
+* Bringing in majority of data to custom database tables
 
 ![right](media/DB.png)
 
@@ -951,12 +1071,16 @@ Future Strategies  (5 mins)
 Future Strategies  (5 mins)
 
 ^
-Current project, bringing in majority of data to custom DB tables
-Speeds up syncing (less entities for complicated data)
-Speeds up development time
-If I need to “Drupalize” specific data, I can in the future.
-Code is a bit more in-line with “Drupal code”
-I could be wrong about this, but I'd like to think it's true.
+- Current project, bringing in majority of data to custom database tables
+- Speeds up syncing (less entities for complicated data)
+- Speeds up development time
+- If I need to “Drupalize” specific data, I can in the future.
+- Code is a bit more in-line with “Drupal code”
+- I could be wrong about this, but I'd like to think it's true.
+- I'd love to get timing data on this... hoped to have it for this talk, but...
+
+^
+--> Lets look at another -->
 
 ---
 
@@ -976,7 +1100,7 @@ I could be wrong about this, but I'd like to think it's true.
 Future Strategies  (5 mins)
 
 ^
-Current project, bringing in majority of data to custom DB tables
+Current project, bringing in majority of data to custom database tables
 
 ^
 Permanant Cache - do you really need to clear cache?
@@ -998,7 +1122,7 @@ Permanant Cache - do you really need to clear cache?
 Future Strategies  (5 mins)
 
 ^
-Current project, bringing in majority of data to custom DB tables
+Current project, bringing in majority of data to custom database tables
 
 ^
 Permanant Cache - do you really need to clear cache?
@@ -1296,7 +1420,7 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 ^
 Future Strategies  (5 mins)
-Current project, bringing in majority of data to custom DB tables
+Current project, bringing in majority of data to custom database tables
 Speeds up syncing (less entities for complicated data)
 Speeds up development time
 If I need to “Drupalize” specific data, I can in the future.
