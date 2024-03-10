@@ -1,7 +1,6 @@
 autoscale: false
 build-lists: false
 slidenumbers: true
-slide-transition: push(horizontal, 0.25)
 text-strong: #9EA6D7
 list: bullet-character(-)
 footer: **Pete Inge** | Bluecadet | _Synchronizing Art with Technology_
@@ -36,12 +35,15 @@ ___
 
 [.background-color: #FFFFFF]
 [.slide-transition: push(horizontal, 0.3)]
+[.footer: ]
+[.slidenumbers: false]
 
-![fit](media/bc/Bluecadet_Lockup-Primary.png)
+![fit](media/bc/bc_logo.png)
 
 ---
 
 [.slide-transition: push(horizontal, 0.3)]
+[.text-strong: #ffffff]
 
 # What is Amon Carter
 
@@ -82,6 +84,8 @@ What is Data syncing? (2 mins)
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # What is **Data Syncing**?
 
 ## Bringing external data into your site for a specific purpose
@@ -104,6 +108,8 @@ Maintaining 2 independent sources
 Mostly maintinas data structure
 
 ---
+
+[.slide-transition: fade(0.0)]
 
 # What is **Data Syncing**?
 
@@ -130,28 +136,124 @@ Moving old source to new source, often modifying the data structure
 
 # Why are we talking about this today?
 
-* We're developers.. duh
+* We're developers at a conference.. duh
 * Current state of technology
-* Accross the board, we've seen a surge in organisations wanting to digitize
-* In the museum space, a typical museum has about 95% of their collection in storage
-
-todo: image/diagram
+* We have seen a surge in organisations wanting to digitize
 
 ^
-Why are we talking about this? (2 mins) [diagrams]
+Why are we talking about this? (2 mins)
 - Microservices and data everywhere
 - Modernizing collections (data)
-- Typical museum has about 95% of their collection in storage
 - W/ the pandemic, surge in orgs wanting to digitize
 - Drupal is a great platform for larger enterprise level syncs
-- Getting the public to see your content, not just researchers
-
-^
---> However many more reasons for Syncing Data.
 
 ---
 
-[image]
+[.slide-transition: fade(0.0)]
+[.slidenumbers: false]
+[.footer: ]
+
+# Why are we talking about this today?
+
+* In the museum space, a typical museum has about 95% of their collection in storage
+
+![inline fill](media/neil-burn-warehouse-06-new-signature-sized.jpg)
+
+^
+Why are we talking about this? (2 mins)
+- Typical museum has about 95% of their collection in storage
+- Getting the public to see your content, not just researchers
+- effects resesrchers, etc
+
+^
+However many more reasons for Syncing Data.
+
+^
+--> Let's look at the carter.
+
+---
+
+# the __Amon Carter__
+
+[.text: text-scale(1.4)]
+
+> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
+
+^ less technical client so we had broad strokes vs hard rules
+
+^
+--> heres a preview of the end result
+
+---
+
+[.slidenumbers: false]
+[.footer: ]
+
+![autoplay mute loop](media/walkthrough2_shorter.mp4)
+
+^
+We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition data.
+
+---
+
+# the __Amon Carter__
+
+<br>
+
+![right hide](media/fish_called_saw.png)
+
+---
+
+# the __Amon Carter__
+
+[.slide-transition: fade(0.0)]
+
+* Artworks
+
+![right](media/fish_called_saw.png)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# the __Amon Carter__
+
+* Artworks,
+* Archive object (pdfs, letters, etc)
+
+![right](media/archives.png)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# the __Amon Carter__
+
+* Artworks,
+* Archive object (pdfs, letters, etc)
+* Artists
+
+![right](media/artists.png)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# the __Amon Carter__
+
+* Artworks,
+* Archive object (pdfs, letters, etc),
+* Artists
+* Exhibition Data
+
+![right](media/exhibitions.png)
+
+---
+
+[.slidenumbers: false]
+[.footer: ]
+
+![](media/2999d7b15ad14da98651814c804bb34f.jpg)
 
 ^
 Lets dive in!
@@ -213,7 +315,8 @@ Think through the consequences
 ^
 Make sure you are using the right tools.
 
-^ tech debt, save yourself as much as you can in the future.
+^
+tech debt, save yourself as much as you can in the future.
 
 ---
 
@@ -225,17 +328,6 @@ Make sure you are using the right tools.
 
 ^
 --> Lets look at how we did walked through these steps for Amon Carter. -->
-
----
-
-# First, _define_ the **state** and the **constraints**
-## Why were we doing this for the Carter?
-
-> Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
-
-<!-- Create a best-in-class Collections Explorer for both researchers and the general public that integrates Amon Carter’s Art and Archive collections -->
-
-^ less technical client so we had broad strokes vs hard rules
 
 ---
 
@@ -260,14 +352,32 @@ I forget why, but all imagery in the CMS. (was it a whim?)
 ^
 We created more constraints as we worked through the process.
 
----
+^
+Important to _understand_ the data
 
 ---
 
-[.column]
+---
 
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies
+
+[.column]
+
+<br>
+
+[.column]
+
+<br>
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Second, _decide_ on an execution **strategy**
+## Syncing Strategies
+
+[.column]
 
 1. Use live external endpoints
 
@@ -281,10 +391,16 @@ NOT an option for AC
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies
 
+[.column]
+
 1. Use live external endpoints
+
+[.column]
 
 ![right fit mute autoplay loop](media/HowMomentWidget.mp4)
 
@@ -295,11 +411,19 @@ NOT an option for AC
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies
 
+[.column]
+
 1. Use live external endpoints
 1. Save raw data, process on the fly
+
+[.column]
+
+![](media/json_field.png)
 
 ^
 Where do you want the lift to be?
@@ -311,14 +435,22 @@ Ex: Wikidata bio fields
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies[^*]
+## Syncing Strategies[^1]
+
+[.column]
 
 1. Use live external endpoints
 1. Save raw data, process on the fly
 1. Bring all data into Drupal Entities, _nodes and taxonomies etc._
 
-[^*]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
+[.column]
+
+![fit](media/data_fields2.jpg)
+
+[^1]: A few more we’ll talk about later, but these were the options I had in my mind at the time for AC.
 
 ^
 **Most robust**
@@ -333,20 +465,28 @@ I may need taxonomies for other parts of the site to build views or determine �
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies - Solution
 
 [.text-strong: #9EA6D7]
 
+[.column]
+
 1. Use live external endpoints
 1. Save raw data, process on the fly
 1. **Bring all data into Drupal Entities, _nodes and taxonomies etc._**
+
+[.column]
 
 ![right fit mute autoplay loop](media/real_madrid.mp4)
 
 ^
 
 ---
+
+[.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies - Solution
@@ -358,6 +498,8 @@ I may need taxonomies for other parts of the site to build views or determine �
 We're relating artworks and artists in content throughout the site for the authoring experience.
 
 ---
+
+[.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies - Solution
@@ -371,15 +513,17 @@ Needed a ref for content authors.
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Second, _decide_ on an execution **strategy**
 ## Syncing Strategies - Solution
 
 ### We wanted to “Drupalize” all the data
   * Needed related data, data was not in a silo
   * Content was going to be enhanced (added fields and content and display options) in the CMS
-  * Search API indexing [^**]
+  * Search API indexing [^2]
 
-[^**]: honestly not needed, but I didn’t fully understand that at the time
+[^2]: honestly not needed, but I didn’t fully understand that at the time
 
 ^
 At this point, I had used search_api in the past, but ...I was a "configurer" but didn't understand the nuts and bolts.
@@ -397,9 +541,13 @@ Goes back to documentation. Unfortunately I don't rememebr the exact why's on th
 # Third, _decide_ on the right **tools**
 ## What tools exist?
 
-* Migrate Module
+[.column]
 
-[AI image of tools]
+<br>
+
+[.column]
+
+![](media/tools1.png)
 
 ^ Migrate module
 Migrate can be used for syncing
@@ -409,38 +557,83 @@ History of migrate: D->D
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Third, _decide_ on the right **tools**
 ## What tools exist?
 
-* Migrate Module
-* Feeds Module
+[.column]
+
+1. Migrate Module
+
+[.column]
+
+![](media/tools1.png)
+
+^ Migrate module
+Migrate can be used for syncing
+History of migrate: D->D
+
+^ explain drupal is everything for everybody.
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Third, _decide_ on the right **tools**
+## What tools exist?
+
+[.column]
+
+1. Migrate Module
+1. Feeds Module
+
+[.column]
+
+![](media/tools1.png)
 
 ^ Feeds __module__
 History of feeds: Ingesting RSS, XML feeds
 
 ---
 
+[.slide-transition: fade(0.0)]
+
 # Third, _decide_ on the right **tools**
 ## What tools exist?
 
-* Migrate Module
-* Feeds Module
-* Custom Code
+[.column]
+
+1. Migrate Module
+1. Feeds Module
+1. Custom Code
+
+[.column]
+
+![](media/tools1.png)
 
 ^
 Custom Code
-* Extra effort
-* Technical debt
+1. Extra effort
+1. Technical debt
 
 ---
+
+[.slide-transition: fade(0.0)]
 
 # Third, _decide_ on the right **tools**
 ## What tools exist?
 
-* Migrate Module
-* Feeds Module
-* Custom Code
-* External to CMS
+[.column]
+
+1. Migrate Module
+1. Feeds Module
+1. Custom Code
+1. External to CMS
+
+[.column]
+
+![](media/tools1.png)
 
 ^
 Not sure what conditions I would suggest this.
@@ -451,17 +644,26 @@ Let Drupal, **Drupal**
 ^
 write to filesystem, process later. if we have 100K objects do we need them all in Drupal?
 
+^
+Example: Exhibitions
+
 ---
+
+[.slide-transition: fade(0.0)]
 
 # Third, _decide_ on the right **tools**
 ## What tools exist?
 
-* Migrate Module
-* Feeds Module
-* **Custom Code**
-* External to CMS
+[.column]
 
-![right](media/B18832F1-03BA-4C8E-AD06-63D7F7926234.PNG)
+1. Migrate Module
+1. Feeds Module
+1. **Custom Code**
+1. External to CMS
+
+[.column]
+
+![](media/B18832F1-03BA-4C8E-AD06-63D7F7926234.PNG)
 
 ^
 I like to reinvent the wheel, b/c i obvisouly can do it better...
@@ -487,11 +689,34 @@ I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 ### Timing and queueing the updates required a custom code solution
 
+[.column]
+
 1. Grab Data
 2. Add item to a Queue Worker(s)
 3. Process Item in the queue at a later time (cron)
 
-![inline](media/horizontal-flow.jpg)
+[.column]
+
+```php
+
+  ...
+  $queue_factory = \Drupal::service('queue');
+  $queue = $queue_factory->get($queue_id);
+
+  $queue_manager = \Drupal::service('plugin.manager.queue_worker');
+  $queue_worker = $queue_manager->createInstance($queue_id);
+
+  $start = time();
+
+  // Run for 25 seconds or 10000 items.
+  $count = 1;
+  while ((time() - $start) < 25 && $count <= $total) {
+    $item = $queue->claimItem(43200);
+
+  }
+  ...
+
+```
 
 ---
 
@@ -500,21 +725,25 @@ I like to reinvent the wheel, b/c i obvisouly can do it better...
 
 ### Custom Code
 
-Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^***]
+Actual ingestion of data could have been Feeds or Migration, but would have required some custom tampering, or migration processes[^3]
 
-[^***]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
+[^3]: I always go back and forth, b/c I want to do it the “Drupal way” but reality is you will still need custom code.
 
 ^
-Date field
+--> So what did we learn from all this? -->
 
 ---
+
+[.footer: ]
+[.slidenumbers: false]
+![](media/38dceaf661d248b69d2fb9d801254587.jpg)
 
 ---
 
 [.build-lists: true]
 [.text: text-scale(0.95)]
 
-# Things we learned
+# Things We Learned
 
 [.column]
 
@@ -526,6 +755,7 @@ Date field
   * Proper reporting for what fails
 
 [.column]
+
 * Reliability of your external data sources
 * Dates
 * Pre-caching
@@ -540,7 +770,190 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 ---
 
-[.build-lists: true]
+# Future Thougths and Strategies
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: false]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__9.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__8.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__7.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__6.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__5.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__4.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__3.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__2.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__1.png)
+
+^
+Future Strategies  (5 mins)
+
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__0.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data” nodes
+* Bringing in majority of data to custom DB tables
+
+![right](media/DB.png)
+
+^
+Future Strategies  (5 mins)
+
+^
+Current project, bringing in majority of data to custom DB tables
+Speeds up syncing (less entities for complicated data)
+Speeds up development time
+If I need to “Drupalize” specific data, I can in the future.
+Code is a bit more in-line with “Drupal code”
+I could be wrong about this, but I'd like to think it's true.
+
+---
+
+[.slide-transition: false]
+
+# Future Thougths and Strategies
+
+* “Synced data Entities” connected to “Enhanced Data” nodes
+* Bringing in majority of data to custom database tables
+* Caching strategies (in regards to large datasets) [^4]
+
+![right 14%](media/screencapture-drupal-org-project-pcb-2024-03-09-14_07_10.png)
+
+[^4]: Permanent Cache Bin -> https://www.drupal.org/project/pcb
+
+^
+Future Strategies  (5 mins)
+
+^
+Current project, bringing in majority of data to custom DB tables
+
+^
+Permanant Cache - do you really need to clear cache?
+
+---
+
+[.slide-transition: false]
 
 # Future Thougths and Strategies
 
@@ -549,15 +962,18 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 * Caching strategies (in regards to large datasets)
 * Re: Search API, writing custom index plugins is really easy (Once you figure it out)
 
+![right 17%](media/pika-1710009237910-1x.png)
+
 ^
 Future Strategies  (5 mins)
-“Synced data Entities” connected to “Enhanced Data” nodes.
+
+^
 Current project, bringing in majority of data to custom DB tables
-Speeds up syncing (less entities for complicated data)
-Speeds up development time
-If I need to “Drupalize” specific data, I can in the future.
-Code is a bit more in-line with “Drupal code”
-I could be wrong about this, but I'd like to think it's true.
+
+^
+Permanant Cache - do you really need to clear cache?
+
+^
 Re Search API, writing custom index plugins is really easy (Once you figure it out)
 
 ---
@@ -566,6 +982,7 @@ Re Search API, writing custom index plugins is really easy (Once you figure it o
 [.footer-style: alignment(left), line-height(8), #rr0000, text-scale(1.5)]
 [.footer: ]
 [.text: alignment(right)]
+[.slidenumbers: false]
 
 [.column]
 
@@ -583,7 +1000,8 @@ Re Search API, writing custom index plugins is really easy (Once you figure it o
 
 pinge@bluecadet.com
 pete.inge@gmail.com
-github.com/pingevt/drupalcamp_nj_2024_data_sync
+**peteinge.com**
+<sub>**github.com/pingevt/drupalcamp_nj_2024_data_sync**</sub>
 
 ^
 QA (rest)
@@ -848,7 +1266,6 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 ^
 Future Strategies  (5 mins)
-“Synced data Entities” connected to “Enhanced Data” nodes.
 Current project, bringing in majority of data to custom DB tables
 Speeds up syncing (less entities for complicated data)
 Speeds up development time

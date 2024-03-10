@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+svg {
+  margin: 10px auto 0;
+}
+
+/* #rev1,
+.rev1,
+.revision1 {
+  background: pink !important;
+  fill: pink !important;
+  stroke: #ffff00;
+  stroke-width: 4px;
+}
+
+.revision1 > rect {
+    fill: #ff0000;
+    stroke: #ffff00;
+    stroke-width: 4px;
+  }
+
+svg {
+  margin: 0 auto;;
+}
+
+rect {
+  fill: #ff0000 !important;
+  stroke: #ffff00 !important;
+  stroke-width: 4px !important;
+} */
