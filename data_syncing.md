@@ -146,7 +146,7 @@ Moving old source to new source, often modifying the data structure
 
 * We're developers at a conference.. duh
 * Current state of technology
-* We have seen a surge in organisations wanting to digitize
+* We have seen a surge in organizations wanting to digitize
 
 ^
 Why are we talking about this? (2 mins)
@@ -171,7 +171,7 @@ Why are we talking about this? (2 mins)
 Why are we talking about this? (2 mins)
 - Typical museum has about 95% of their collection in storage
 - Getting the public to see your content, not just researchers
-- effects resesrchers, etc
+- effects researchers, etc
 
 ^
 However many more reasons for Syncing Data.
@@ -350,7 +350,7 @@ tech debt, save yourself as much as you can in the future.
 * Wanted all the imagery **in** the CMS
 
 ^
-We are lucky with most museums that we don't need instantanious/real-time updates.
+We are lucky with most museums that we don't need instantaneous/real-time updates.
 We were told low volume of updates
 
 ^
@@ -542,7 +542,7 @@ Educational Materials
 At this point, I had used search_api in the past, but ...I was a "configurer" but didn't understand the nuts and bolts.
 
 ^
-Goes back to documentation. Unfortunately I don't rememebr the exact why's on these decisions.
+Goes back to documentation. Unfortunately I don't remember the exact why's on these decisions.
 
 ---
 
@@ -680,7 +680,7 @@ Example: Exhibitions
 ![](media/B18832F1-03BA-4C8E-AD06-63D7F7926234.PNG)
 
 ^
-I like to reinvent the wheel, b/c i obvisouly can do it better...
+I like to reinvent the wheel, b/c i obviously can do it better...
 
 ^
 --> So lets look at some more technical reasons. -->
@@ -825,7 +825,7 @@ Dealing with images - should spend a lot more time thinking about this.
   * Text is fast, images (files) are not
   * How to detect new images
 * Custom Code
-  * Error catching and handeling
+  * Error catching and handling
   * Proper reporting for what fails
 
 [.column]
@@ -850,7 +850,7 @@ B/c of custom code, we needed to add in more error checking and handling after t
   * Text is fast, images (files) are not
   * How to detect new images
 * Custom Code
-  * Error catching and handeling
+  * Error catching and handling
   * Proper reporting for what fails
 
 [.column]
@@ -876,7 +876,7 @@ Slow external API.
   * Text is fast, images (files) are not
   * How to detect new images
 * Custom Code
-  * Error catching and handeling
+  * Error catching and handling
   * Proper reporting for what fails
 
 [.column]
@@ -903,7 +903,7 @@ Date strings to date objects.
   * Text is fast, images (files) are not
   * How to detect new images
 * Custom Code
-  * Error catching and handeling
+  * Error catching and handling
   * Proper reporting for what fails
 
 [.column]
@@ -920,7 +920,7 @@ What worked and what did not.  (5 mins)
 During maintenance, second queue to pre-cache teaser views of artwork content
 
 ---
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 ^
 Future Strategies  (5 mins)
@@ -929,7 +929,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: false]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -942,7 +942,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -955,7 +955,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -968,7 +968,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -981,7 +981,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -994,7 +994,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -1007,7 +1007,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -1020,7 +1020,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -1033,7 +1033,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -1047,7 +1047,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data Nodes”
 
@@ -1060,7 +1060,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: fade(0.0)]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data” nodes
 * Bringing in majority of data to custom database tables
@@ -1086,7 +1086,7 @@ Future Strategies  (5 mins)
 
 [.slide-transition: false]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data” nodes
 * Bringing in majority of data to custom database tables
@@ -1103,13 +1103,13 @@ Future Strategies  (5 mins)
 Current project, bringing in majority of data to custom database tables
 
 ^
-Permanant Cache - do you really need to clear cache?
+Permanent Cache - do you really need to clear cache?
 
 ---
 
 [.slide-transition: false]
 
-# Future Thougths and Strategies
+# Future Thoughts and Strategies
 
 * “Synced data Entities” connected to “Enhanced Data” nodes
 * Bringing in majority of data to custom database tables
@@ -1125,7 +1125,7 @@ Future Strategies  (5 mins)
 Current project, bringing in majority of data to custom database tables
 
 ^
-Permanant Cache - do you really need to clear cache?
+Permanent Cache - do you really need to clear cache?
 
 ^
 Re Search API, writing custom index plugins is really easy (Once you figure it out)
