@@ -12,6 +12,7 @@ footer: **Pete Inge** | Bluecadet | _Synchronizing Art with Technology_
 ^
 * Be the Storyteller
 * Breath....
+* --> Water -->
 
 ---
 
@@ -63,7 +64,7 @@ We at Bluecadet, partnered with them a few years ago to work on their website.
 ^
 --> I want to find out about you... -->
 
----
+<---
 
 [.build-lists: true]
 # Quick Poll
@@ -79,7 +80,7 @@ Audience? Why did they attend the talk?
 ^
 --> Let's define a few things -->
 
----
+--->
 
 # What is **Data Syncing**?
 
@@ -377,6 +378,9 @@ Important to _understand_ the data
 
 <br>
 
+^
+We want to make informed decisions
+
 ---
 
 [.slide-transition: fade(0.0)]
@@ -411,9 +415,16 @@ NOT an option for AC
 
 ![right fit mute autoplay loop](media/HowMomentWidget.mp4)
 
-^ I would say not recommended, but there are some use cases.
+^
+I would say not recommended, but there are some use cases.
+
+^
 THF is a good example of the use case. [todo pics!]
+
+^
 Connection to Github (to display open tickets) [todo pics!]
+
+^
 NOT an option for AC
 
 ---
@@ -434,8 +445,14 @@ NOT an option for AC
 
 ^
 Where do you want the lift to be?
+
+^
 **Will the end user be affected by this?**
+
+^
 Ex: Wikidata bio fields
+
+^
 “Fallback content” - could process on the fly
  * Process thousands of pieces of data with an unknown amount actually needed.
  * Assuming “Important” content will not need fallbacks
@@ -465,7 +482,8 @@ How much do we need to “Drupalize” all the data?
 Do I need to use the data in the CMS?
 I may need taxonomies for other parts of the site to build views or determine “related” content.
 
-^ Current client want to associate foreign ids in the editorial work, rather then let Drupal be Drupal.
+^
+Current client want to associate foreign ids in the editorial work, rather then let Drupal be Drupal.
 
 ^
 --> What did we choose for the Carter? -->
@@ -490,6 +508,9 @@ I may need taxonomies for other parts of the site to build views or determine �
 ![right fit mute autoplay loop](media/real_madrid.mp4)
 
 ^
+
+^
+--> Let's take a look at why -->
 
 ---
 
@@ -766,13 +787,15 @@ let's recap!
 
 ^
 --> On to things we learned -->
---> So what did we learn from all this? -->
 
 ---
 
 [.footer: ]
 [.slidenumbers: false]
 ![](media/38dceaf661d248b69d2fb9d801254587.jpg)
+
+^
+--> So what did we learn from all this? -->
 
 ---
 
@@ -931,127 +954,22 @@ Future Strategies  (5 mins)
 
 # Future Thoughts and Strategies
 
-* “Synced data Entities” connected to “Enhanced Data Nodes”
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
 
-![inline](diagrams/Syncing__9.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__8.png)
+![inline](diagrams/Syncing__start.png)
 
 ^
 Future Strategies  (5 mins)
 
 ---
 
-[.slide-transition: fade(0.0)]
+[.slide-transition: false]
 
 # Future Thoughts and Strategies
 
-* “Synced data Entities” connected to “Enhanced Data Nodes”
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
 
-![inline](diagrams/Syncing__7.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__6.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__5.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__4.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__3.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__2.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__1.png)
-
-^
-Future Strategies  (5 mins)
-
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__0.png)
+![inline](diagrams/Syncing__end.png)
 
 ^
 Future Strategies  (5 mins)
@@ -1159,5 +1077,141 @@ pete.inge@gmail.com
 
 ^
 QA (rest)
+
+---
+
+
+
+
+---
+
+[.slide-transition: false]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__9.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__8.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__7.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__6.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__5.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__4.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__3.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__2.png)
+
+^
+Future Strategies  (5 mins)
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__1.png)
+
+^
+Future Strategies  (5 mins)
+
+
+---
+
+[.slide-transition: fade(0.0)]
+
+# Future Thoughts and Strategies
+
+* “Synced Data Entities” connected to “Enhanced Data Nodes”
+
+![inline](diagrams/Syncing__0.png)
+
+^
+Future Strategies  (5 mins)
 
 ---
