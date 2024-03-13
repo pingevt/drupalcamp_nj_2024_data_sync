@@ -80,7 +80,7 @@ Audience? Why did they attend the talk?
 ^
 --> Let's define a few things -->
 
---->
+---
 
 # What is **Data Syncing**?
 
@@ -201,6 +201,7 @@ However many more reasons for Syncing Data.
 ![autoplay mute loop](media/walkthrough2_shorter.mp4)
 
 ^
+Wait till next slide to say
 We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition data.
 
 ---
@@ -326,6 +327,9 @@ Make sure you are using the right tools.
 ^
 tech debt, save yourself as much as you can in the future.
 
+^
+--> recap 3
+
 ---
 
 # Say it again
@@ -352,6 +356,8 @@ tech debt, save yourself as much as you can in the future.
 
 ^
 We are lucky with most museums that we don't need instantaneous/real-time updates.
+
+^
 We were told low volume of updates
 
 ^
@@ -368,7 +374,7 @@ Important to _understand_ the data
 ---
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies
+<!-- ## Syncing Strategies -->
 
 [.column]
 
@@ -386,15 +392,22 @@ We want to make informed decisions
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies
+<!-- ## Syncing Strategies -->
 
 [.column]
 
 1. Use live external endpoints
 
-^ I would say not recommended, but there are some use cases.
-THF is a good example of the use case. [todo pics!]
-Connection to Github (to display open tickets) [todo pics!]
+^
+At large, I would say not recommended, but there are some use cases.
+
+^
+THF is a good example of the use case.
+
+^
+~~Connection to Github (to display open tickets)~~
+
+^
 NOT an option for AC
 
 
@@ -405,7 +418,7 @@ NOT an option for AC
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies
+<!-- ## Syncing Strategies -->
 
 [.column]
 
@@ -416,13 +429,13 @@ NOT an option for AC
 ![right fit mute autoplay loop](media/HowMomentWidget.mp4)
 
 ^
-I would say not recommended, but there are some use cases.
+At large, I would say not recommended, but there are some use cases.
 
 ^
-THF is a good example of the use case. [todo pics!]
+THF is a good example of the use case.
 
 ^
-Connection to Github (to display open tickets) [todo pics!]
+~~Connection to Github (to display open tickets)~~
 
 ^
 NOT an option for AC
@@ -432,7 +445,7 @@ NOT an option for AC
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies
+<!-- ## Syncing Strategies -->
 
 [.column]
 
@@ -462,13 +475,13 @@ Ex: Wikidata bio fields
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies[^1]
+<!-- ## Syncing Strategies[^1] -->
 
 [.column]
 
 1. Use live external endpoints
 1. Save raw data, process on the fly
-1. Bring all data into Drupal Entities, _nodes and taxonomies etc._
+1. Bring all data into Drupal Entities, _nodes and taxonomies etc._ (Drupalize the data)
 
 [.column]
 
@@ -493,7 +506,7 @@ Current client want to associate foreign ids in the editorial work, rather then 
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies - Solution
+<!-- ## Syncing Strategies - Solution -->
 
 [.text-strong: #9EA6D7]
 
@@ -517,7 +530,7 @@ Current client want to associate foreign ids in the editorial work, rather then 
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies - Solution
+<!-- ## Syncing Strategies - Solution -->
 
 ### We wanted to “Drupalize” all the data
   * Needed related data, the data was not in a silo
@@ -530,7 +543,7 @@ We're relating artworks and artists in content throughout the site for the autho
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies - Solution
+<!-- ## Syncing Strategies - Solution -->
 
 ### We wanted to “Drupalize” all the data
   * Needed related data, the data was not in a silo
@@ -550,7 +563,7 @@ Educational Materials
 [.slide-transition: fade(0.0)]
 
 # Second, _decide_ on an execution **strategy**
-## Syncing Strategies - Solution
+<!-- ## Syncing Strategies - Solution -->
 
 ### We wanted to “Drupalize” all the data
   * Needed related data, the data was not in a silo
@@ -687,7 +700,7 @@ Example: Exhibitions
 [.slide-transition: fade(0.0)]
 
 # Third, _decide_ on the right **tools**
-## What tools exist?
+<!-- ## What tools exist? -->
 
 [.column]
 
@@ -709,7 +722,7 @@ I like to reinvent the wheel, b/c i obviously can do it better...
 ---
 
 # Third, _decide_ on the right **tools**
-## What tools exist?
+<!-- ## What tools exist? -->
 
 ### Timing and queueing the updates required a custom code solution
 
@@ -722,7 +735,7 @@ I like to reinvent the wheel, b/c i obviously can do it better...
 [.build-lists: true]
 
 # Third, _decide_ on the right **tools**
-## What tools exist?
+<!-- ## What tools exist? -->
 
 ### Timing and queueing the updates required a custom code solution
 
@@ -758,7 +771,7 @@ I like to reinvent the wheel, b/c i obviously can do it better...
 ---
 
 # Third, _decide_ on the right **tools**
-## What tools exist?
+<!-- ## What tools exist? -->
 
 ### Custom Code
 
@@ -942,6 +955,9 @@ What worked and what did not.  (5 mins)
 ^
 During maintenance, second queue to pre-cache teaser views of artwork content
 
+^
+--> Now to the future -->
+
 ---
 # Future Thoughts and Strategies
 
@@ -1032,7 +1048,7 @@ Permanent Cache - do you really need to clear cache?
 * “Synced data Entities” connected to “Enhanced Data” nodes
 * Bringing in majority of data to custom database tables
 * Caching strategies (in regards to large datasets)
-* Re: Search API, writing custom index plugins is really easy (Once you figure it out)
+* Re: Search API, writing custom index plugins is really "easy" (Once you figure it out)
 
 ![right 17%](media/pika-1710009237910-1x.png)
 
