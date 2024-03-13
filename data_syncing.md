@@ -172,7 +172,10 @@ Why are we talking about this? (2 mins)
 Why are we talking about this? (2 mins)
 - Typical museum has about 95% of their collection in storage
 - Getting the public to see your content, not just researchers
-- effects researchers, etc
+- Effects researchers, etc
+
+^
+When the collection explorers were completed, it was the first time clients could look at their entire collection at once.
 
 ^
 However many more reasons for Syncing Data.
@@ -184,11 +187,33 @@ However many more reasons for Syncing Data.
 
 # the __Amon Carter__
 
+## Purpose
+
 [.text: text-scale(1.4)]
 
 > Create an easy-to-use and accessible collections explorer. The collections explorer will highlight the Carter’s dynamic collection and act as a digital extension of the in-gallery experience.
 
 ^ less technical client so we had broad strokes vs hard rules
+
+^
+Let's take a look at the project
+
+---
+
+[.build-lists: true]
+
+# the __Amon Carter__
+
+## Tech
+
+- CMS: Drupal 8
+- Hosting: Pantheon
+- Collection Management: EMu
+- DAMs: Piction
+- Search: Pantheon Search (Solr)
+
+^
+
 
 ^
 --> heres a preview of the end result
@@ -208,6 +233,8 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 
 # the __Amon Carter__
 
+## Data
+
 <br>
 
 ![right hide](media/fish_called_saw.png)
@@ -215,6 +242,8 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 ---
 
 # the __Amon Carter__
+
+## Data
 
 [.slide-transition: fade(0.0)]
 
@@ -228,6 +257,8 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 
 # the __Amon Carter__
 
+## Data
+
 * Artworks,
 * Archive object (pdfs, letters, etc)
 
@@ -238,6 +269,8 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 [.slide-transition: fade(0.0)]
 
 # the __Amon Carter__
+
+## Data
 
 * Artworks,
 * Archive object (pdfs, letters, etc)
@@ -250,6 +283,8 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 [.slide-transition: fade(0.0)]
 
 # the __Amon Carter__
+
+## Data
 
 * Artworks,
 * Archive object (pdfs, letters, etc),
