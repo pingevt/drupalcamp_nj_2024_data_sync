@@ -42,6 +42,16 @@ ___
 
 ![fit](media/bc/bc_logo.png)
 
+^
+Bluecadet is redefining visitor
+experience for the world's most
+creative businesses, brands, and
+cultural institutions.
+
+^
+Bluecadet was born in a museum, raised in a Philly rowhouse, and has grown to a 50-person team with studios in Philadelphia, New York, and LA. Our work ranges from designing visitor centers and immersive exhibition installations to developing comprehensive web platforms and digital tools — all designed, tested, and crafted to share stories that make an impact.
+
+
 ---
 
 [.slide-transition: push(horizontal, 0.3)]
@@ -259,7 +269,7 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 
 ## Data
 
-* Artworks,
+* Artworks
 * Archive object (pdfs, letters, etc)
 
 ![right](media/archives.png)
@@ -272,7 +282,7 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 
 ## Data
 
-* Artworks,
+* Artworks
 * Archive object (pdfs, letters, etc)
 * Artists
 
@@ -286,7 +296,7 @@ We synced in Artworks, Archive object (pdfs, letters, etc), Artists, Exhibition 
 
 ## Data
 
-* Artworks,
+* Artworks
 * Archive object (pdfs, letters, etc),
 * Artists
 * Exhibition Data
@@ -1132,137 +1142,3 @@ QA (rest)
 ---
 
 
-
-
----
-
-[.slide-transition: false]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__9.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__8.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__7.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__6.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__5.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__4.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__3.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__2.png)
-
-^
-Future Strategies  (5 mins)
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__1.png)
-
-^
-Future Strategies  (5 mins)
-
-
----
-
-[.slide-transition: fade(0.0)]
-
-# Future Thoughts and Strategies
-
-* “Synced Data Entities” connected to “Enhanced Data Nodes”
-
-![inline](diagrams/Syncing__0.png)
-
-^
-Future Strategies  (5 mins)
-
----
