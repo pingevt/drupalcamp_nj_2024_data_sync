@@ -49,7 +49,7 @@ creative businesses, brands, and
 cultural institutions.
 
 ^
-Bluecadet was born in a museum, raised in a Philly rowhouse, and has grown to a 50-person team with studios in Philadelphia, New York, and LA. Our work ranges from designing visitor centers and immersive exhibition installations to developing comprehensive web platforms and digital tools — all designed, tested, and crafted to share stories that make an impact.
+Bluecadet was born in a museum, raised in a Philly rowhouse, and has grown to a 50-person team with studios in Philadelphia, New York, and LA. **Our work ranges from designing visitor centers and immersive exhibition installations to developing comprehensive web platforms and digital tools — all designed, tested, and crafted to share stories that make an impact.**
 
 
 ---
@@ -72,23 +72,7 @@ I'll let you read that, but the Carter is a great medium size museum in Texas.
 We at Bluecadet, partnered with them a few years ago to work on their website.
 
 ^
---> I want to find out about you... -->
-
-<---
-
-[.build-lists: true]
-# Quick Poll
-
-* Interest in Art and Technology Integration
-* You have current challenges in mind
-* You have a future project in mind
-* Other
-
-^ 2 mins
-Audience? Why did they attend the talk?
-
-^
---> Let's define a few things -->
+--> on to define data syncing / integrations
 
 ---
 
@@ -221,6 +205,26 @@ Let's take a look at the project
 - Collection Management: EMu
 - DAMs: Piction
 - Search: Pantheon Search (Solr)
+
+^
+
+
+^
+--> the content
+
+---
+
+[.build-lists: true]
+
+# the __Amon Carter__
+
+## The Content
+
+- 61,988 Artworks
+- 24,281 Archive Objects
+- 19,642 Artists/Creators
+- **~105,911 Data Objects**
+- **100,000 Images/PDFs**
 
 ^
 
@@ -415,6 +419,8 @@ We created more constraints as we worked through the process.
 Important to _understand_ the data
 
 ---
+
+^ BREATHE
 
 ---
 
@@ -627,6 +633,8 @@ Goes back to documentation. Unfortunately I don't remember the exact why's on th
 
 ^
 -->
+
+^ BREATHE
 
 ---
 
@@ -1008,6 +1016,8 @@ During maintenance, second queue to pre-cache teaser views of artwork content
 
 ^
 Future Strategies  (5 mins)
+
+  ^ BREATHE
 
 ---
 
